@@ -8,10 +8,10 @@ const HomeStack = createStackNavigator();
 const SearchScreen = ({navigation}) => {
   return (
     <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
-      {/* <Text>Arama Geçmişi</Text> */}
+      <Text>Arama Geçmişi</Text>
       <Button
         title="Go to Details"
-        onPress={() => navigation.navigate('Detail')}
+        onPress={() => NavigationContainer.navigate('Detail')}
       />
     </View>
   );
@@ -20,11 +20,7 @@ const SearchScreen = ({navigation}) => {
 function SearchStack() {
   return (
     <HomeStack.Navigator>
-      <HomeStack.Screen
-        options={{headerShown: false}}
-        name="Search"
-        component={SearchScreen}
-      />
+      <HomeStack.Screen name="Search" component={SearchScreen} />
       <HomeStack.Screen name="Detail" component={DetailScreen} />
     </HomeStack.Navigator>
   );

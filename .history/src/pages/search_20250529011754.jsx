@@ -8,7 +8,7 @@ const HomeStack = createStackNavigator();
 const SearchScreen = ({navigation}) => {
   return (
     <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
-      {/* <Text>Arama Geçmişi</Text> */}
+      <Text>Arama Geçmişi</Text>
       <Button
         title="Go to Details"
         onPress={() => navigation.navigate('Detail')}

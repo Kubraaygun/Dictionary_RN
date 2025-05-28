@@ -2,6 +2,7 @@ import {NavigationContainer} from '@react-navigation/native';
 import {enableScreens} from 'react-native-screens';
 enableScreens();
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
+import SearchScreen from './src/pages/search';
 import HistoryScreen from './src/pages/history';
 import FavoriteScreen from './src/pages/favorite';
 import SearchStack from './src/pages/search';

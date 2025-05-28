@@ -5,7 +5,7 @@ import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import HistoryScreen from './src/pages/history';
 import FavoriteScreen from './src/pages/favorite';
 import SearchStack from './src/pages/search';
-
+import './gesture-handler';
 const Tab = createBottomTabNavigator();
 
 function App() {
