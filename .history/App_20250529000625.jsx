@@ -13,8 +13,8 @@ function App() {
   return (
     <NavigationContainer>
       <Tab.Navigator>
-        <Tab.Screen name="History" component={HistoryScreen} />
         <Tab.Screen name="Search" component={SearchScreen} />
+        <Tab.Screen name="History" component={HistoryScreen} />
         <Tab.Screen name="Favorite" component={FavoriteScreen} />
       </Tab.Navigator>
     </NavigationContainer>
