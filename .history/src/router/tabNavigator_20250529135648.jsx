@@ -1,0 +1,20 @@
+import {StyleSheet, Text, View} from 'react-native';
+import React from 'react';
+
+const TabNavigator = () => {
+  return (
+    <Tab.Navigator>
+      <Tab.Screen name="History" component={HistoryScreen} />
+      <Tab.Screen
+        name="Search"
+        options={{headerShown: false}}
+        component={SearchStack}
+      />
+      <Tab.Screen name="Favorite" component={FavoriteScreen} />
+    </Tab.Navigator>
+  );
+};
+
+export default TabNavigator;
+
+const styles = StyleSheet.create({});

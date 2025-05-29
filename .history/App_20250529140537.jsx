@@ -7,7 +7,7 @@ import TabNavigator from './src/router/tabNavigator';
 const App = () => {
   return (
     <NavigationContainer>
-      <RootNavigator />
+      <TabNavigator />
     </NavigationContainer>
   );
 };
