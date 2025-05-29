@@ -30,11 +30,7 @@ const App = () => {
     <NavigationContainer>
       <Tab.Navigator>
         <Tab.Screen name="History" component={HistoryScreen} />
-        <Tab.Screen
-          name="Search"
-          options={{headerShown: false}}
-          component={SearchStack}
-        />
+        <Tab.Screen name="Search" component={SearchStack} />
         <Tab.Screen name="Favorite" component={FavoriteScreen} />
       </Tab.Navigator>
     </NavigationContainer>

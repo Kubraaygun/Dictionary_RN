@@ -21,15 +21,11 @@ function SearchStack() {
   return (
     <HomeStack.Navigator>
       <HomeStack.Screen
-        options={{headerShown: true, title: 'Search'}}
+        options={{headerShown: false}}
         name="Search"
         component={SearchScreen}
       />
-      <HomeStack.Screen
-        options={{headerShown: true, title: 'Detail'}}
-        name="Detail"
-        component={DetailScreen}
-      />
+      <HomeStack.Screen name="Detail" component={DetailScreen} />
     </HomeStack.Navigator>
   );
 }

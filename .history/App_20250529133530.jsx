@@ -4,24 +4,28 @@ enableScreens();
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import HistoryScreen from './src/pages/history';
 import FavoriteScreen from './src/pages/favorite';
+import SearchStack from './src/pages/search';
 import DetailScreen from './src/pages/detail';
 import SearchScreen from './src/pages/search';
-import {createStackNavigator} from '@react-navigation/stack';
 
 const Tab = createBottomTabNavigator();
 
-const Stack = createStackNavigator();
+const HomeStack = createStackNavigator();
 
 const SearchStack = () => {
   return (
-    <Stack.Navigator>
-      <Stack.Screen
-        options={{headerShown: false}}
+    <HomeStack.Navigator>
+      <HomeStack.Screen
+        options={{headerShown: true, title: 'Search'}}
         name="Search"
         component={SearchScreen}
       />
-      <Stack.Screen name="Detail" component={DetailScreen} />
-    </Stack.Navigator>
+      <HomeStack.Screen
+        options={{headerShown: true, title: 'Detail'}}
+        name="Detail"
+        component={DetailScreen}
+      />
+    </HomeStack.Navigator>
   );
 };
 

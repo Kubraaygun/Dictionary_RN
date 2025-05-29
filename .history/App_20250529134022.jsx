@@ -14,14 +14,18 @@ const Stack = createStackNavigator();
 
 const SearchStack = () => {
   return (
-    <Stack.Navigator>
+    <HomeStack.Navigator>
       <Stack.Screen
         options={{headerShown: false}}
         name="Search"
         component={SearchScreen}
       />
-      <Stack.Screen name="Detail" component={DetailScreen} />
-    </Stack.Navigator>
+      <HomeStack.Screen
+        options={{headerShown: true, title: 'Detail'}}
+        name="Detail"
+        component={DetailScreen}
+      />
+    </HomeStack.Navigator>
   );
 };
 

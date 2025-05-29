@@ -4,31 +4,14 @@ enableScreens();
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import HistoryScreen from './src/pages/history';
 import FavoriteScreen from './src/pages/favorite';
-import DetailScreen from './src/pages/detail';
-import SearchScreen from './src/pages/search';
-import {createStackNavigator} from '@react-navigation/stack';
+import SearchStack from './src/pages/search';
 
 const Tab = createBottomTabNavigator();
 
-const Stack = createStackNavigator();
-
-const SearchStack = () => {
-  return (
-    <Stack.Navigator>
-      <Stack.Screen
-        options={{headerShown: false}}
-        name="Search"
-        component={SearchScreen}
-      />
-      <Stack.Screen name="Detail" component={DetailScreen} />
-    </Stack.Navigator>
-  );
-};
-
-const App = () => {
+function App() {
   return (
     <NavigationContainer>
-      <Tab.Navigator>
+      <Tab.Navigator screenOptions={{headerShown: false}}>
         <Tab.Screen name="History" component={HistoryScreen} />
         <Tab.Screen
           name="Search"
@@ -39,5 +22,5 @@ const App = () => {
       </Tab.Navigator>
     </NavigationContainer>
   );
-};
+}
 export default App;

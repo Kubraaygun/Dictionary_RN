@@ -19,12 +19,8 @@ const SearchScreen = ({navigation}) => {
 
 function SearchStack() {
   return (
-    <HomeStack.Navigator>
-      <HomeStack.Screen
-        options={{headerShown: true, title: 'Search'}}
-        name="Search"
-        component={SearchScreen}
-      />
+    <HomeStack.Navigator screenOptions={{headerShown: false}}>
+      <HomeStack.Screen name="Search" component={SearchScreen} />
       <HomeStack.Screen
         options={{headerShown: true, title: 'Detail'}}
         name="Detail"
